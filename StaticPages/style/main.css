@@ -764,8 +764,26 @@ i.i-open:before {
 	height: 24px;
 	line-height: 24px;
 	width: 56px;
+	text-align: right;
+	font-size: 1.2rem;
+	/*border:1px solid #b5b5b5;*/
+}
+.ban{
+	color: #fff;
+	font-size: 1.4rem;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
 	text-align: center;
-	border:1px solid #b5b5b5;
+	border-radius: 2px;
+	margin-right: 2px;
+}
+.go{
+	background: #00a0eb;
+}
+.arrival{
+	background: #ed6672;
 }
 .orderlist .wrapper .item .qf {
 	border: 1px solid #22ac38;
@@ -902,6 +920,10 @@ i.i-open:before {
 	border-bottom: 1px solid rgba(0,0,0,0.2);
 	padding-bottom: 0;
 }
+.orderdetail .wrapper .item .comment{
+	text-align: center;
+	border:1px solid #b5b5b5;
+}
 .orderdetail .item-title,.orderdetail .path-start, .path-end {
 	color: #b5b5b5;
 	border:none;
@@ -936,9 +958,10 @@ i.i-open:before {
 .orderdetail .wrapper .item:after{
 	content: "";
 }
-.orderdetail .wrapper .item .cansel-com{
+.orderlist .wrapper .item .cansel-com{
 	background: #b5b5b5;
 	color: #fff;
+	text-align: center;
 	border-radius: 2px;
 }
 .package h2{

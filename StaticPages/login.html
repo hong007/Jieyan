@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>捷燕登陆</title>
+	<link rel="stylesheet" type="text/css" href="style/base.css">
+	<link rel="stylesheet" type="text/css" href="style/login.css"></head>
+<body>
+	<form class="login-form" id="loginF">
+		<ul class="login-menu">
+			<li class="login-item login-logo">
+				<img class="logo-img" src="images/logo.png"></li>
+			<li class="login-item">
+				<input class="login-input" type="text" name="" id="userName" placeholder="请输入用户名">
+				<span class="clear-value">×</span>
+			</li>
+			<li class="login-item">
+				<input class="login-input" type="password" name="" id="userPwd" placeholder="请输入密码">
+				<span class="clear-value">×</span>
+			</li>
+			<li class="login-item login-submit">
+				<button id="submitBtn">登录</button>
+			</li>
+			<li class="login-item login-forgot">
+				<a class="txtct" href="javascript:void(0)">忘记密码？</a>
+			</li>
+		</ul>
+	</form>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$(".clear-value").click(function(){
+				$(this).prev("input").val("");
+			});
+			$(".login-input").focus(function(){
+				$(this).next("span").show();
+			}).blur(function(){
+				if ($(this).val()!="") {
+
+					// alert("输入有误，请重新输入！")
+				}else{
+					alert("输入不能为空，请输入！");
+					$(this).focus();
+				}
+				$(this).next("span").hide();
+
+			});
+			$("#userPwd").blur(function(){
+				if ($(this).val()!="") {
+					$("#submitBtn").css("background","#fb8815");
+				}else{
+					$("#submitBtn").css("background","#B1B1B0");
+				}
+			});
+		})
+	</script>
+</body>
+</html>

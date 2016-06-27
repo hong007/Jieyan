@@ -107,11 +107,13 @@ i.i-open:before {
 	height: 30px
 }
 #eta {
-	height: 72px
+	height: 72px;
+	color: #434343;
 }
 .drone-tips h2{
 	font-weight: bold;
 	font-size: 1.7rem;
+	/*color: #434343;*/
 }
 #rule {
 	min-height: 10px
@@ -187,7 +189,7 @@ i.i-open:before {
 	color: #666
 }
 .location .wrapper .txt-from.default, .location .wrapper .txt-to.default {
-	color: #fa8919
+	color: #626262
 }
 .location .wrapper .txt-from .fail-tip, .location .wrapper .txt-to .fail-tip {
 	color: #adadad
@@ -278,7 +280,8 @@ i.i-open:before {
 	display: inline-block;
 	position: absolute;
 	padding: 0 4px 0 16px;
-	vertical-align: top
+	vertical-align: top;
+	color: #000;
 }
 .suggest .option .city-select .cityname {
 	vertical-align: top
@@ -464,28 +467,36 @@ i.i-open:before {
 	border: 0;
 	color: #555;
 	background-color: #000;
-	font-size: 1.4rem
+	font-size: 1.5rem
 }
 .menu .portrait{
-	margin-top: 30px;
+	margin: 30px 0 20px;
 	padding-left: 15%;
 }
 .portrait-img{
-	width: 50px;
-	height: 50px;
-	border:1px solid red;
+	width: 60px;
+	height: 60px;
+	/*border:1px solid red;*/
 	border-radius: 100%;
-	margin-right: 20px;
+	margin-right: 15px;
 }
 .menu .login-infor{
 	display: inline-block;
-	font-size: 1.6rem;
 	color: #fff;
 	vertical-align: middle;
 }
 .menu .login-infor p{
+	font-size: 1.6rem;
 	display: inline-block;
 	width: 100%;
+	height: 20px;
+	margin-top: 10px;
+}
+.menu .login-infor .address-infor{
+	height: 20px;
+	margin-top: 0;
+	color: #555;
+	font-size: 1.2rem;
 }
 .login-infor a{
 

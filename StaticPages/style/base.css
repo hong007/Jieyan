@@ -1,0 +1,137 @@
+/* 初始化代码 */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /*font-size: 100%;*/
+  font-weight: 400;
+  vertical-align: baseline
+}
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block
+}
+body {
+  line-height: 1
+}
+blockquote, q {
+  quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+a {
+  color: #7e8c8d;
+  -webkit-backface-visibility: hidden
+}
+li {
+  list-style: none
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px
+}
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, .2);
+  -webkit-border-radius: 6px
+}
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(125, 125, 125, .7);
+  -webkit-border-radius: 6px
+}
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(125, 125, 125, .7);
+  -webkit-border-radius: 6px
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+  user-select: none;
+}
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+html, body,*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body, input, button, select, textarea {
+  font: 62.5%/1.5 "微软雅黑", "Microsoft Yahei", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  color: #34495e;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+  font-size: 1.4rem;
+}
+img, a img {
+  border: 0
+}
+a {
+  color: #bcbcbc;
+  outline: medium none;
+  text-decoration: none;
+  font-size: 1.4rem;
+  star: expression(this.onFocus=this.blur())
+}
+a:hover {
+  text-decoration: none
+}
+a, img {
+  -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+label {
+  cursor: pointer
+}
+ul li, .ol li {
+  list-style: none
+}
+em, cite, i {
+  font-style: normal
+}
+input:focus, textarea:focus {
+  outline: none;
+}
+input::-ms-clear {
+  display: none;
+}
+textarea {
+  resize: none;
+}
+
+/* 通用样式 */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+.txtct {
+  text-align: center;
+}
+.txtlt {
+  text-align: left;
+}
+.txtrt {
+  text-align: right;
+}
+.maincolor{
+  color: #fb8815;
+}

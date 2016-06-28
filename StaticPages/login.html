@@ -6,7 +6,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<title>捷燕登陆</title>
 	<link rel="stylesheet" type="text/css" href="style/base.css">
-	<link rel="stylesheet" type="text/css" href="style/login.css"></head>
+	<link rel="stylesheet" type="text/css" href="style/main.css"></head>
 <body>
 	<form class="login-form" id="loginF">
 		<ul class="login-menu">
@@ -21,7 +21,7 @@
 				<span class="clear-value">×</span>
 			</li>
 			<li class="login-item login-submit">
-				<button id="submitBtn">登录</button>
+				<a class="login-link" href="index.html" id="submitBtn">登录</a>
 			</li>
 			<li class="login-item login-forgot">
 				<a class="txtct" href="javascript:void(0)">忘记密码？</a>
@@ -29,7 +29,6 @@
 		</ul>
 	</form>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-
 	<script type="text/javascript">
 		$(function(){
 			$(".clear-value").click(function(){

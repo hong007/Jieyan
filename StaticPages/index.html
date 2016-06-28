@@ -29,8 +29,7 @@
                     <div class="location">
                         <div class="wrapper wrapper-from-hook border-1px">
                             <i class="i-from i-circle"></i>
-                            <span class="txt-from txt-from-hook default">定位为最近的发件站点</span>
-                            <i class="i-from i-arrow-right"></i>
+                            <span class="txt-from txt-from-hook default">定位为最近的发件站点</span> <i class="i-from i-arrow-right"></i>
                         </div>
                         <div class="wrapper wrapper-to-hook border-1px">
                             <i class="i-to i-circle"></i>
@@ -38,12 +37,11 @@
                             <i class="i-from i-arrow-right"></i>
                         </div>
                         <div class="wrapper-send">
-                            <button class="send-btn">我要寄件</button>
-                            <label class="txtct protocol-label">
-                                <input type="checkbox" name="">
-                                我已阅读并同意
-                                <a href="" class="maincolor">《服务协议》</a>
-                            </label>
+                            <button class="send-btn" id="sendBtn">我要寄件</button>
+                            <p class="txtct protocol-p">
+                                <span>我已阅读并同意</span>
+                                <a href="javascript:void(0)" class="maincolor">《服务协议》</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -63,47 +61,60 @@
                 <li class="portrait item" idx="0">
                     <img class="fl portrait-img" src="images/portrait.png">
                     <div class="fl login-infor">
-                        <!-- <a class="txtct" href="">注册/登录</a>
-                        -->
-                        <p class="name">姓名</p>
-                        <p class="address-infor">
+                        <a class="txtlt" id="userOpration" href="login.html">注册/登录</a>
+                        <p class="name" style="display:none;">姓名</p>
+                        <p class="address-infor" style="display:none;">
                             <i class="i-address"></i>
                             地址
                         </p>
                     </div>
                 </li>
                 <li class="trip item" idx="1">
-                    <a>
+                    <a href="javascript:void(0)">
                         <i class="icon"></i>
                         消息
                     </a>
                 </li>
+                <li class="trip item" idx="1">
+                    <a href="travel.html">
+                        <i class="icon"></i>
+                        行程
+                    </a>
+                </li>
                 <li class="settings item" idx="2">
-                    <a>
+                    <a href="javascript:void(0)">
                         <i class="icon"></i>
                         设置
                     </a>
                 </li>
-                <li class="l-help item" idx="3">
-                    <a>
+                <!-- <li class="l-help item" idx="3">
+                -->
+                <li class="trip item" idx="1">
+                    <a href="javascript:void(0)">
                         <i class="icon"></i>
                         帮助
                     </a>
                 </li>
-                <li class="l-law item" idx="4">
-                    <a>
+                <!-- <li class="l-law item" idx="4">
+                -->
+                <li class="trip item" idx="1">
+                    <a href="javascript:void(0)">
                         <i class="icon"></i>
                         法律条款
                     </a>
                 </li>
-                <li class="l-about item" idx="4">
-                    <a>
+                <!-- <li class="l-about item" idx="4">
+                -->
+                <li class="trip item" idx="1">
+                    <a href="javascript:void(0)">
                         <i class="icon"></i>
                         关于我们
                     </a>
                 </li>
-                <li class="l-exit item" idx="4">
-                    <a>
+                <!-- <li class="l-exit item" idx="4">
+                -->
+                <li class="trip l-exit item" idx="1">
+                    <a href="javascript:void(0)" id="exitBtn">
                         <i class="icon"></i>
                         退出登录
                     </a>
@@ -117,6 +128,32 @@
         </div>
     </div>
     <!-- 侧边栏结束 -->
+    <!-- 弹框页面开始-->
+    <div class="confirm-box quit-box">
+        <div class="layer-content">
+            <p class="txtct">
+                <img class="tips-img" src="images/tips-img.png">
+            </p>
+            <p class="txtct">你确定要退出吗？</p>
+            <p class="layer-btn-p txtlt">
+                <button type="button">取消</button>
+                <button type="button" class="confirm-btn fr">确定</button>
+            </p>
+        </div>
+    </div>
+    <!-- 授权弹框 -->
+    <div class="confirm-box authorize active">
+        <div class="layer-content">
+            <p class="txtct">
+                <img class="tips-img" src="images/tips-img.png">
+            </p>
+            <p class="txtct">未授权使用定位，请检查设置后重试</p>
+            <p class="layer-btn-p txtlt">
+                <button class="confirm-btn" type="button" style="width:100%;">我知道了</button>
+            </p>
+        </div>
+    </div>
+    <!-- 弹框页面结束-->
     <!-- 选择地点开始 -->
     <div class="suggest hidden">
         <div class="border-1px option">
@@ -134,17 +171,17 @@
             </div>
         </div>
         <!--
-        <div class="pos-wrapper pos-wrapper-hook">
+            <div class="pos-wrapper pos-wrapper-hook">
             <ul class="pos-scroller-hook" style="transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
                 <li data-index="0">
                     <span class="name name-hook">当前位置</span>
                     <span class="border-1px address address-hook"></span>
                     <input type="hidden" class="lat-hook" value="0">
-                    <input type="hidden" class="lng-hook" value="0">
-                </li>
+                    <input type="hidden" class="lng-hook" value="0"></li>
 
             </ul>
-        </div> -->
+        </div>
+        -->
         <div class="city" style="display: none;">
             <div class="city-wrapper city-wrapper-hook">
                 <div class="scroller-hook">
@@ -693,11 +730,36 @@
         <img src="images/loadpage.png">
     </div>
     <!-- 启动时载入页面结束 -->
-
+    <!-- 登录页面 -->
+    <div class="confirm-box login-box">
+        <div class="layer-content">
+            <form class="login-form" id="loginF">
+                <ul class="login-menu">
+                    <li class="login-item">
+                        <h2 class="login-item-title">登录</h2>
+                        <span class="close-btn" id="closeBtn">×</span>
+                    </li>
+                    <li class="login-item">
+                        <input class="login-input" type="text" name="" id="userName" placeholder="请输入用户名">
+                        <span class="clear-value">×</span>
+                    </li>
+                    <li class="login-item">
+                        <input class="login-input" type="password" name="" id="userPwd" placeholder="请输入密码">
+                        <span class="clear-value">×</span>
+                    </li>
+                    <li class="login-item login-submit">
+                        <a class="login-link" href="javascript:void(0)" id="submitBtn">登录</a>
+                    </li>
+                    <li class="login-item login-forgot">
+                        <a class="txtlt fl" href="javascript:void(0)">忘记密码？</a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <!-- 登录页面 -->
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/zepto.js"></script>
-
     <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&amp;key=ac3c45852cfdc6b80b64068e03dbf36b&amp;plugin=AMap.Autocomplete"></script>
 
     <script type="text/javascript">
@@ -725,7 +787,6 @@
                 $("#hidLng").val(e.poi.location.lng);
                 $("#hidLat").val(e.poi.location.lat);
             }
-
             $("#txtLocation").focus(function () {
                 $(this).val('');
                 $("#hidLng").val('');
@@ -734,27 +795,31 @@
 
 
             //加载城市事件
-            $('body').on('click', '#zone_ids,#chooseCity', function () {
+            $('#zone_ids,#chooseCity').click(function () {
                 var zid = $(this).attr('id');
                 $('.container').show();
                 $('.letter').show();
 
             });
             //选择城市 start
-            $('body').on('click', '.city-list p', function () {
+            $('.city-list p').click(function () {
                 var type = $('.container').data('type');
                 $('#zone_ids').html($(this).html()).attr('data-id', $(this).attr('data-id'));
                 $('#chooseCity').html($(this).html()).attr('data-id', $(this).attr('data-id'));
                 $('.container').hide();
                 $('.letter').hide();
             });
-            $('body').on('click', '.letter a', function () {
+            $('.letter a').click(function () {
                 var s = $(this).html();
+                $(".letter a.active").removeClass("active");
+                $(this).addClass("active");
+                // $(this).addClass("active").parent("li").siblings("li").find("a").removeClass("active");
                 $(window).scrollTop($('#' + s + '1').offset().top);
             });
 
-
-
+            // $("#userOpration").click(function(){
+            //     $(this).hide().nextAll("p").show();
+            // });
             $("#btnMenu").click(function () {
                 $("#menu").addClass("visible").removeClass("hidden");
                 $(".close-hook").addClass("visible");
@@ -776,7 +841,17 @@
                 $("#wrap").show();
                 $(".container").hide();
             });
+            $(".protocol-p").click(function () {
+                $(this).toggleClass("active")
+            });
 
+            // 退出登录
+            $("#exitBtn").click(function () {
+                $(".quit-box").addClass("active");
+            });
+            $(".layer-btn-p button").click(function () {
+                $(this).closest(".confirm-box").removeClass("active");
+            });
             // $(".city-select-hook").click(function () {
             //     $(this).hide().next("input").show().focus();
             //     $(".address-select").css("left", "50%");
@@ -785,6 +860,36 @@
                 $(".city-select-hook").show().next("input").hide();
                 $(".address-select-hook").css("left", "96");
                 $(".container").hide();
+            });
+
+            $("#sendBtn").click(function () {
+                $(".login-box").addClass("active");
+            });
+            $("#closeBtn").click(function () {
+                $(".login-box").removeClass("active");
+            });
+            // 登录页面
+            $(".clear-value").click(function () {
+                $(this).prev("input").val("");
+            });
+            $(".login-input").focus(function () {
+                $(this).next("span").show();
+            }).blur(function () {
+                if ($(this).val() != "") {
+                    // alert("输入有误，请重新输入！")
+                } else {
+                    alert("输入不能为空，请输入！");
+                    $(this).focus();
+                }
+                $(this).next("span").hide();
+
+            });
+            $("#userPwd").blur(function () {
+                if ($(this).val() != "") {
+                    $("#submitBtn").css("background", "#fb8815");
+                } else {
+                    $("#submitBtn").css("background", "#B1B1B0");
+                }
             });
         })
     </script>

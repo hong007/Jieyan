@@ -10,9 +10,8 @@ body, html {
 	user-select: none
 }
 @font-face {
-	font-family: home-icon;
-	src: url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.eot);
-	src: url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.eot#iefix) format('embedded-opentype'), url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.woff) format('woff'), url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.ttf) format('truetype'), url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.svg#home-icon) format('svg');
+	font-family: home-icon;	/*src: url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.eot);
+		src: url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.eot#iefix) format('embedded-opentype'), url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.woff) format('woff'), url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.ttf) format('truetype'), url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/common/font/home-icon.svg#home-icon) format('svg');*/
 	font-weight: 400;
 	font-style: normal
 }
@@ -417,8 +416,7 @@ i.i-open:before {
 	width: 16px;
 	height: 16px;
 	margin-right: 10px;
-	opacity: .2;
-	background-image: url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/suggest/loading.gif);
+	opacity: .2;	/*background-image: url(//shield.xiaojukeji.com/c/webapp-homepage/0.0.22/suggest/loading.gif);*/
 	background-repeat: no-repeat;
 	background-size: contain
 }
@@ -496,7 +494,7 @@ i.i-open:before {
 }
 .portrait-img {
 	width: 60px;
-	height: 60px;	
+	height: 60px;
 	border-radius: 100%;
 	margin-right: 15px;
 }
@@ -605,63 +603,64 @@ i.i-open:before {
 	background-size: 278px 44px;
 	background-position: -239px -5px
 }
+
 /*登录页面*/
-.login-form{
+.login-form {
 	width: 80%;
 	margin: 0 auto;
 	padding-top: 50px;
 }
-.login-menu{
+.login-menu {
 	text-align: center;
 }
-
-.login-item{
+.login-item {
 	position: relative;
 	height: 50px;
 	line-height: 50px;
 	margin-bottom: 20px;
 }
-.login-logo{
+.login-logo {
 	margin: 0 0 30px;
 }
-.logo-img{
+.logo-img {
 	width: auto;
 	height: 80%;
 }
-.login-item input{
+.login-item input {
 	font-size: 1.0rem;
 	text-align: left;
 	width: 100%;
 	height: 100%;
 	color: #444;
 	padding-left: 5px;
-	border:none;
+	border: none;
+	background: transparent;
 	border-bottom: 1px solid #c7c7c7;
 }
-.login-item input:focus{
+.login-item input:focus {
 	border-bottom: 1px solid #fb8815;
 }
-.login-submit{
+.login-submit {
 	margin: 40px 0 0;
 }
-.login-submit .login-link{
+.login-submit .login-link {
 	display: inline-block;
 	border-radius: 25px;
 	background: #B1B1B0;
-	border:none;
+	border: none;
 	width: 90%;
 	height: 100%;
 	font-size: 1.4rem;
 	color: #fff;
 	text-align: center;
 }
-.btn-avtive button{
+.btn-avtive button {
 	background: #fb8815;
 }
-.login-forgot a{
+.login-forgot a {
 	font-size: 0.9rem;
 }
-.clear-value{
+.clear-value {
 	display: none;
 	position: absolute;
 	right: 10px;
@@ -670,15 +669,16 @@ i.i-open:before {
 	height: 16px;
 	line-height: 16px;
 }
+
 /*弹框登录页*/
-.login-box .layer-content{
+.login-box .layer-content {
 	padding-top: 10px;
 	margin-top: -133px;
 }
-.login-item-title{
+.login-item-title {
 	font-size: 1.6rem;
 }
-.close-btn{
+.close-btn {
 	width: 20px;
 	height: 20px;
 	position: absolute;
@@ -687,24 +687,25 @@ i.i-open:before {
 	font-size: 1.8rem;
 	cursor: pointer;
 }
-.login-box .login-form{
+.login-box .login-form {
 	padding-top: 0;
 }
-.login-box .login-item{
+.login-box .login-item {
 	margin: 0;
 	height: 45px;
 	line-height: 45px;
 }
-.login-box .login-item input,.login-box .login-forgot a{
+.login-box .login-item input, .login-box .login-forgot a {
 	font-size: 1.4rem;
 }
-.login-box .login-submit{
+.login-box .login-submit {
 	margin-top: 20px;
 }
-.login-box .login-submit .login-link{
+.login-box .login-submit .login-link {
 	border-radius: 5px;
 	width: 100%;
 }
+
 /*我的行程*/
 #orderlist {
 	width: 100%;
@@ -724,15 +725,15 @@ i.i-open:before {
 	position: relative;
 	padding: 0 0 15px;
 	color: #666;
-	font-size: 1.4rem;
-	overflow: hidden;
+	font-size: 1.4rem;	/*overflow: hidden;*/
+	height: 121px;
 	margin-bottom: 20px;
 	background: #fff;
 }
-.finished-hook .item:last-child{
+.finished-hook .item:last-child {
 	margin-bottom: 0;
 }
-.item-title{
+.item-title {
 	font-size: 1.4rem;
 	color: #000;
 	border-bottom: 1px dashed #666;
@@ -742,7 +743,7 @@ i.i-open:before {
 .orderlist .wrapper .item:active {
 	background-color: #e5e5e5
 }
-.location .wrapper .default:after,.orderlist .wrapper .item:after {
+.location .wrapper .default:after, .orderlist .wrapper .item:after {
 	position: absolute;
 	top: 70px;
 	right: 10px;
@@ -750,7 +751,7 @@ i.i-open:before {
 	font-family: home-icon;
 	color: #999
 }
-.location .wrapper .default:after{
+.location .wrapper .default:after {
 	right: 0;
 	top: -1px;
 }
@@ -762,16 +763,16 @@ i.i-open:before {
 	width: 56px;
 	text-align: center;
 }
-.orderlist .wrapper .item .qf{
-	border:1px solid #22ac38;
+.orderlist .wrapper .item .qf {
+	border: 1px solid #22ac38;
 	color: #22ac38;
 }
-.orderlist .wrapper .item .dd{
-	border:1px solid #ff4351;
+.orderlist .wrapper .item .dd {
+	border: 1px solid #ff4351;
 	color: #ff4351;
 }
-.orderlist .wrapper .item .yc{
-	border:1px solid #f39700;
+.orderlist .wrapper .item .yc {
+	border: 1px solid #f39700;
 	color: #f39700;
 }
 .orderlist .wrapper .item .path-start, .orderlist .wrapper .item .path-end {
@@ -838,11 +839,41 @@ i.i-open:before {
 	line-height: 50px;
 	padding: 10px;
 	margin-right: 5px;
-	opacity: .66;
-	background-image: url(//shield.xiaojukeji.com/c/webapp-travel/0.0.8/orderlist/loading_2.gif);
+	opacity: .66;	/*background-image: url(//shield.xiaojukeji.com/c/webapp-travel/0.0.8/orderlist/loading_2.gif);*/
 	background-repeat: no-repeat;
 	background-size: 20px 20px;
 	background-position: center center
+}
+.deltips {
+	position: absolute;
+	top: 0;
+	left: -80px;
+	/*left: -0px;*/
+	text-align: center;
+	line-height: 121px;
+	bottom: 0;
+	/*background: #FF2424;*/
+	color: #fff;
+	width: 80px
+}
+.deltips span{
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+	margin-top: 65px;
+	background: url(../images/sprite.png) no-repeat -6px -9px;
+}
+.btn {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: -80px;
+	text-align: center;
+	line-height: 121px;
+	background: #FF2424;
+	color: #fff;
+	width: 80px
 }
 
 /*弹框样式*/
@@ -854,8 +885,7 @@ i.i-open:before {
 	left: 0;
 	width: 100%;
 }
-.confirm-box.active ,
-.quit-box.active {
+.confirm-box.active, .quit-box.active {
 	display: block;
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 9999999;

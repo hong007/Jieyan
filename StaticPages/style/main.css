@@ -762,6 +762,7 @@ i.i-open:before {
 	line-height: 24px;
 	width: 56px;
 	text-align: center;
+	border:1px solid #000;
 }
 .orderlist .wrapper .item .qf {
 	border: 1px solid #22ac38;
@@ -775,7 +776,7 @@ i.i-open:before {
 	border: 1px solid #f39700;
 	color: #f39700;
 }
-.orderlist .wrapper .item .path-start, .orderlist .wrapper .item .path-end {
+.path-start, .path-end {
 	float: left;
 	width: 90%;
 	padding-left: 10px;
@@ -786,19 +787,19 @@ i.i-open:before {
 	text-overflow: ellipsis;
 	-o-text-overflow: ellipsis;
 }
-.orderlist .wrapper .item .path-start:before, .orderlist .wrapper .item .path-end:before {
+.path-start:before, .path-end:before {
 	margin-right: 5px;
 	content: "\66";
 	font-family: home-icon;
 	font-size: 18px
 }
-.orderlist .wrapper .item .path-start:empty:before, .orderlist .wrapper .item .path-end:empty:before {
+.path-start:empty:before, .path-end:empty:before {
 	content: ""
 }
-.orderlist .wrapper .item .path-start:before {
+.path-start:before {
 	color: #41b07b
 }
-.orderlist .wrapper .item .path-end:before {
+.path-end:before {
 	color: #e37378
 }
 .orderlist .nodata {
@@ -875,7 +876,10 @@ i.i-open:before {
 	color: #fff;
 	width: 80px
 }
-
+/*订单详情*/
+.orderdetail .wrapper .item:after{
+	content: "";
+}
 /*弹框样式*/
 .confirm-box {
 	display: none;

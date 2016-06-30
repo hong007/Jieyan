@@ -10,7 +10,7 @@
 		var X = 0;
 		var objX = 0;
 		window.addEventListener('touchstart',function(event){
-			event.preventDefault();
+			// event.preventDefault();阻止默认事件会导致a便签点击无效
 			var obj = event.target.parentNode;
 			if(obj.className == "item"){
 				initX = event.targetTouches[0].pageX;
@@ -18,7 +18,7 @@
 			}
 			if( objX == 0){
 				window.addEventListener('touchmove',function(event) {
-					event.preventDefault();
+					// event.preventDefault();
 					var obj = event.target.parentNode;
 					if (obj.className == "item") {
 						moveX = event.targetTouches[0].pageX;
@@ -39,7 +39,7 @@
 			}
 			else if(objX<0){
 				window.addEventListener('touchmove',function(event) {
-					event.preventDefault();
+					// event.preventDefault();
 					var obj = event.target.parentNode;
 					if (obj.className == "item") {
 						moveX = event.targetTouches[0].pageX;
@@ -61,7 +61,7 @@
 
 		})
 		window.addEventListener('touchend',function(event){
-			event.preventDefault();
+			// event.preventDefault();
 			var obj = event.target.parentNode;
 			if(obj.className == "item"){
 				objX =(obj.style.WebkitTransform.replace(/translateX\(/g,"").replace(/px\)/g,""))*1;

@@ -9,38 +9,103 @@
 <body>
     <div id="orderDetails" class="orderdetail orderlist">
         <div id="detail-top">
-            <div class="detail-cont">
-                <img src="images/logo.png">
-                <div class="detail-status">
-                    <p>
-                        飞行距离
+            <div class="detail-header clearfix">
+                <img class="fl" src="images/logo02.png">
+                <div class="detail-status fl">
+                    <p class="para">
+                        飞行距离：
                         <span>32公里</span>
                     </p>
-                    <p>
-                        运送耗时
+                    <p class="para">
+                        运送耗时：
                         <span>20分12秒</span>
                     </p>
-                    <a href="javascript:viod(0);">13345454665</a>
+                    <a  class="dial" href="tel:13675832345"></a>
                 </div>
             </div>
         </div>
-        <section class="wrapper">
-            <ul class="finished-hook">
-                <li class="item">
-                    <h2 class="item-title">
-                        <span>运单编号：</span>
-                        <span>S840320160627</span>
-                        <span class="comment">已完成</span>
-                    </h2>
-                    <span class="path-start">浙江省杭州市淳安县吴山村12...</span>
-                    <span class="path-end">浙江省杭州市建德市三二零国道...</span>
-                </li>
-            </ul>
-        </section>
-        <div class="package">
-            <h2>包裹状态</h2>
-            <div class="package-left">
-                
+        <div class="detail-cont">
+            <section class="wrapper">
+                <ul class="finished-hook">
+                    <li class="item">
+                        <h2 class="item-title">
+                            <span>运单编号：</span>
+                            <span>S840320160627</span>
+                            <span class="comment">已完成</span>
+                            <!-- <span class="comment cansel-com">已取消</span> -->
+                        </h2>
+                        <span class="path-start">浙江省杭州市淳安县吴山村12...</span>
+                        <span class="path-end">浙江省杭州市建德市三二零国道...</span>
+                    </li>
+                </ul>
+            </section>
+            <div class="package">
+                <h2>包裹动态</h2>
+                <div class="package">
+                    <ul class="status-menu">
+                        <li class="status-item complete-item">
+                            <span class="circ"></span>
+                            <span class="date-span">
+                                <small class="item-day">2016.06.30</small>
+                                <em class="time-em">13:30</em>
+                            </span>
+                            <p>已完成返航，感谢使用捷雁无人机</p>
+                        </li>
+                        <!-- 运单取消时显示 -->
+                        <!-- <li class="status-item cansel-item">
+                            <span class="circ"></span>
+                            <span class="date-span">
+                                <small class="item-day">2016.06.30</small>
+                                <em class="time-em">13:30</em>
+                            </span>
+                            <p>天气状况，未完成包裹运送</p>
+                        </li> -->
+                        <li class="status-item">
+                            <span class="circ"></span>
+                            <span class="date-span">
+                                <small class="item-day">2016.06.30</small>
+                                <em class="time-em">12:30</em>
+                            </span>
+                            <p class="contacter">
+                                张兰 电话
+                                <a class="dial-phone" href="tel:13675832345">13675823425</a>
+                                已经签收包裹
+                            </p>
+                        </li>
+                        <li class="status-item">
+                            <span class="circ"></span>
+                            <span class="date-span">
+                                <small class="item-day">2016.06.30</small>
+                                <em class="time-em">12:00</em>
+                            </span>
+                            <p>正在派送中，请准备签收</p>
+                        </li>
+                        <li class="status-item">
+                            <span class="circ"></span>
+                            <span class="date-span">
+                                <small class="item-day">2016.06.30</small>
+                                <em class="time-em">11:50</em>
+                            </span>
+                            <p>快件拣货完毕 ，等待出库</p>
+                        </li>
+                        <li class="status-item">
+                            <span class="circ"></span>
+                            <span class="date-span">
+                                <small class="item-day">2016.06.30</small>
+                                <em class="time-em">11:40</em>
+                            </span>
+                            <p>快件已经正在装箱</p>
+                        </li>
+                        <li class="status-item">
+                            <span class="circ"></span>
+                            <span class="date-span">
+                                <small class="item-day">2016.06.30</small>
+                                <em class="time-em">11:30</em>
+                            </span>
+                            <p>您提交了寄送申请，请等待确认</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
